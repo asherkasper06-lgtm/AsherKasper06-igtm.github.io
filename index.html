@@ -1,24 +1,32 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Asher M. Kasper — Portfolio</title>
-  <meta name="description" content="Portfolio and CV of Asher M. Kasper: International Affairs, world languages, and digital information warfare." />
-  <meta property="og:title" content="Asher M. Kasper — Portfolio" />
-  <meta property="og:description" content="International Affairs • Russian • German • Spanish • Arabic • Digital Information Warfare" />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Portfolio of Asher M. Kasper: FSU International Affairs student focused on languages and digital information warfare." />
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" />
+
   <style>
-    :root{ --bg:#0b0d10; --fg:#f5f7fb; --muted:#a7b0c0; --card:#131720; --link:#4a8df7; --max:880px }
+    :root {
+      --bg:#0b0d10; --fg:#f5f7fb; --muted:#a7b0c0; --card:#131720;
+      --link:#4a8df7; --max:880px;
+    }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    body{
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:var(--bg);color:var(--fg)
+    }
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    header{padding:64px 16px 24px;border-bottom:1px solid #1f2633;background:linear-gradient(180deg,#0b0d10 0,#0b0d10ea 60%,#0b0d1000 100%)}
+
+    header{
+      padding:64px 16px 24px;
+      border-bottom:1px solid #1f2633;
+      background:linear-gradient(180deg,#0b0d10 0,#0b0d10ea 60%,#0b0d1000 100%)
+    }
     .wrap{max-width:var(--max);margin:0 auto}
     .top{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
     .name{font-weight:700;font-size:36px;line-height:1.15;margin:0}
@@ -28,14 +36,37 @@
     main{padding:24px 16px}
     section{max-width:var(--max);margin:0 auto 28px}
     h2{font-size:20px;margin:0 0 12px}
-    .card{border:1px solid #1f2633;background:var(--card);border-radius:14px;padding:16px}
+    .card{border:1px solid #1f2633;background:var(--card);
+      border-radius:14px;padding:16px}
     .grid{display:grid;gap:16px}
     @media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
     ul.clean{margin:0;padding-left:18px}
-    footer{max-width:var(--max);margin:32px auto;padding:16px;color:var(--muted);border-top:1px solid #1f2633}
-    .kicker{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-    .pill{display:inline-flex;gap:6px;align-items:center;padding:4px 8px;border:1px solid #2a364b;border-radius:999px;color:var(--muted);font-size:13px}
+    footer{max-width:var(--max);margin:32px auto;padding:16px;
+      color:var(--muted);border-top:1px solid #1f2633}
+    .kicker{display:inline-block;font-size:12px;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .pill{display:inline-flex;gap:6px;align-items:center;
+      padding:4px 8px;border:1px solid #2a364b;border-radius:999px;
+      color:var(--muted);font-size:13px}
     .row{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Expandable accordion styling */
+    .expandables{max-width:var(--max);margin:40px auto}
+    .expandable{border:1px solid #1f2633;border-radius:14px;
+      margin-bottom:12px;background:var(--card);overflow:hidden}
+    .expand-toggle{
+      width:100%;background:none;color:var(--fg);text-align:left;
+      border:none;outline:none;font:600 17px system-ui,sans-serif;
+      padding:14px 18px;cursor:pointer;transition:background .3s
+    }
+    .expand-toggle:hover{background:#19212f}
+    .expand-content{
+      max-height:0;overflow:hidden;opacity:0;padding:0 18px;
+      transition:all .4s ease
+    }
+    .expand-content.open{
+      max-height:800px;opacity:1;padding:14px 18px
+    }
   </style>
 </head>
 <body>
@@ -46,13 +77,11 @@
       <div class="row">
         <a class="pill" href="mailto:Asherkasper06@gmail.com">Asherkasper06@gmail.com</a>
         <a class="pill" href="mailto:AMK24x@fsu.edu">AMK24x@fsu.edu</a>
-        <a class="pill" href="#writing">Writing</a>
       </div>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#writing">Writing</a>
+        <a href="#expandables">More</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -62,9 +91,7 @@
     <section id="about">
       <div class="kicker">About</div>
       <div class="card">
-        <p>
-          I study International Affairs at Florida State University with a concentration in world languages I am activley pursueing course work for minors in Russian, German, Spanish, and Arabic. I have an interest in digital information warfare.
-        </p>
+        <p>I study International Affairs at Florida State University with a focus on world languages (Russian, German, Spanish, Arabic) and an interest in digital information warfare and media literacy.</p>
         <p class="row" style="margin:0">
           <a class="pill" href="/resume.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
           <span class="pill">Tallahassee, FL</span>
@@ -75,47 +102,63 @@
     <section id="projects">
       <div class="kicker">Projects</div>
       <div class="grid">
-       <article class="card">
-  <h2>DecodedFSU — Media Literacy</h2>
-  <p>Student-run awareness concept focused on recognizing propaganda patterns in social feeds (visual rhetoric, euphemisms, framing).</p>
-  <p class="row">
-    <a class="pill" href="/decodedfsu.html" target="_blank" rel="noopener">Overview</a>
-  </p>
-</article>
+        <article class="card">
+          <h2>DecodedFSU — Media Literacy</h2>
+          <p>Student-run awareness concept focused on recognizing propaganda patterns in social feeds (visual rhetoric, euphemisms, framing).</p>
+          <p class="row">
+            <a class="pill" href="#expandables" onclick="toggleSection('decodedfsu')">Overview</a>
+          </p>
         </article>
         <article class="card">
           <h2>Social Media & Political Perception Survey</h2>
-          <p>I am currently working on Drafting a cross-site survey concept comparing student cohorts (Dresden, Haifa, Bethlehem) to explore platform effects on political attitudes and precieved biasis.</p>
-          <p class="row"><a class="pill" href="#" target="_blank" rel="noopener">Methods</a></p>
+          <p>Drafted a cross-site survey concept comparing student cohorts (Dresden, Haifa, Bethlehem) to explore platform effects on political attitudes.</p>
         </article>
       </div>
     </section>
 
-    <section id="experience">
-      <div class="kicker">Experience</div>
-      <div class="card">
-        <strong>Organization — Role</strong> · <em>Dates</em>
-        <ul class="clean">
-          <li>Achievement/outcome metric (%, #, or deliverable).</li>
-          <li>Concise bullet on policy, research, writing, or languages.</li>
-        </ul>
-      </div>
-    </section>
+    <!-- 🔽 Expandable slide-down sections -->
+    <section id="expandables" class="expandables">
 
-    <section id="writing">
-      <div class="kicker">Writing</div>
-      <div class="grid">
-        <article class="card">
-          <h2>Essay or Brief Title</h2>
-          <p>One‑line summary; add course or publication if relevant.</p>
-          <p><a class="pill" href="#" target="_blank" rel="noopener">Read</a></p>
-        </article>
-        <article class="card">
-          <h2>Policy Memo</h2>
-          <p>50–80 words on the problem, approach, and recommendation.</p>
-          <p><a class="pill" href="#" target="_blank" rel="noopener">PDF</a></p>
-        </article>
+      <div class="expandable">
+        <button class="expand-toggle" onclick="toggleSection('decodedfsu')">
+          DecodedFSU — Overview
+        </button>
+        <div id="decodedfsu" class="expand-content">
+          <p><strong>DecodedFSU</strong> is a student-run awareness concept that teaches fast, practical ways 
+          to spot manipulation in social feeds. It focuses on <em>how</em> messages work — visual tactics, 
+          euphemisms, and emotional framing.</p>
+          <h3>Goals</h3>
+          <ul>
+            <li>Give students simple “decoder tools.”</li>
+            <li>Reduce impulsive reposting of unverified claims.</li>
+            <li>Model neutral, method-first analysis across issues.</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="expandable">
+        <button class="expand-toggle" onclick="toggleSection('resume')">
+          Resume
+        </button>
+        <div id="resume" class="expand-content">
+          <p>Upload your resume as <code>resume.pdf</code> to your repo, then link it here:</p>
+          <p><a href="/resume.pdf" target="_blank" class="pill">Open Resume (PDF)</a></p>
+        </div>
+      </div>
+
+      <div class="expandable">
+        <button class="expand-toggle" onclick="toggleSection('writing')">
+          Writing Samples
+        </button>
+        <div id="writing" class="expand-content">
+          <p>List or link your essays and policy memos here:</p>
+          <ul>
+            <li><a href="#">Policy Memo: Digital Information Warfare</a></li>
+            <li><a href="#">Essay: Perception and Media</a></li>
+          </ul>
+        </div>
+      </div>
+
     </section>
 
     <section id="contact">
@@ -136,17 +179,18 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
-        const id=a.getAttribute('href'); if(id==="#") return;
-        const el=document.querySelector(id); if(!el) return;
-        e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'});
+
+    // Accordion toggle with smooth scroll
+    function toggleSection(id) {
+      document.querySelectorAll('.expand-content').forEach(sec => {
+        if (sec.id !== id) sec.classList.remove('open');
       });
-    });
+      const section = document.getElementById(id);
+      section.classList.toggle('open');
+      if (section.classList.contains('open')) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   </script>
 </body>
 </html>
-```
-
----
-Created Oct 23 2025
