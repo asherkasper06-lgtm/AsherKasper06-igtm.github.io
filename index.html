@@ -40,7 +40,6 @@
       border-radius:14px;padding:16px}
     .grid{display:grid;gap:16px}
     @media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
-    ul.clean{margin:0;padding-left:18px}
     footer{max-width:var(--max);margin:32px auto;padding:16px;
       color:var(--muted);border-top:1px solid #1f2633}
     .kicker{display:inline-block;font-size:12px;letter-spacing:.12em;
@@ -49,24 +48,6 @@
       padding:4px 8px;border:1px solid #2a364b;border-radius:999px;
       color:var(--muted);font-size:13px}
     .row{display:flex;gap:12px;flex-wrap:wrap}
-
-    /* Expandable accordion styling */
-    .expandables{max-width:var(--max);margin:40px auto}
-    .expandable{border:1px solid #1f2633;border-radius:14px;
-      margin-bottom:12px;background:var(--card);overflow:hidden}
-    .expand-toggle{
-      width:100%;background:none;color:var(--fg);text-align:left;
-      border:none;outline:none;font:600 17px system-ui,sans-serif;
-      padding:14px 18px;cursor:pointer;transition:background .3s
-    }
-    .expand-toggle:hover{background:#19212f}
-    .expand-content{
-      max-height:0;overflow:hidden;opacity:0;padding:0 18px;
-      transition:all .4s ease
-    }
-    .expand-content.open{
-      max-height:800px;opacity:1;padding:14px 18px
-    }
   </style>
 </head>
 <body>
@@ -81,7 +62,6 @@
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#expandables">More</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -102,63 +82,23 @@
     <section id="projects">
       <div class="kicker">Projects</div>
       <div class="grid">
+
         <article class="card">
           <h2>DecodedFSU — Media Literacy</h2>
           <p>Student-run awareness concept focused on recognizing propaganda patterns in social feeds (visual rhetoric, euphemisms, framing).</p>
           <p class="row">
-            <a class="pill" href="#expandables" onclick="toggleSection('decodedfsu')">Overview</a>
+            <a class="pill"
+               href="https://asherkasper06-lgtm.github.io/decodedfsu-site/"
+               target="_blank" rel="noopener">Overview</a>
           </p>
         </article>
+
         <article class="card">
           <h2>Social Media & Political Perception Survey</h2>
           <p>Drafted a cross-site survey concept comparing student cohorts (Dresden, Haifa, Bethlehem) to explore platform effects on political attitudes.</p>
         </article>
+
       </div>
-    </section>
-
-    <!-- 🔽 Expandable slide-down sections -->
-    <section id="expandables" class="expandables">
-
-      <div class="expandable">
-        <button class="expand-toggle" onclick="toggleSection('decodedfsu')">
-          DecodedFSU — Overview
-        </button>
-        <div id="decodedfsu" class="expand-content">
-          <p><strong>DecodedFSU</strong> is a student-run awareness concept that teaches fast, practical ways 
-          to spot manipulation in social feeds. It focuses on <em>how</em> messages work — visual tactics, 
-          euphemisms, and emotional framing.</p>
-          <h3>Goals</h3>
-          <ul>
-            <li>Give students simple “decoder tools.”</li>
-            <li>Reduce impulsive reposting of unverified claims.</li>
-            <li>Model neutral, method-first analysis across issues.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="expandable">
-        <button class="expand-toggle" onclick="toggleSection('resume')">
-          Resume
-        </button>
-        <div id="resume" class="expand-content">
-          <p>Upload your resume as <code>resume.pdf</code> to your repo, then link it here:</p>
-          <p><a href="/resume.pdf" target="_blank" class="pill">Open Resume (PDF)</a></p>
-        </div>
-      </div>
-
-      <div class="expandable">
-        <button class="expand-toggle" onclick="toggleSection('writing')">
-          Writing Samples
-        </button>
-        <div id="writing" class="expand-content">
-          <p>List or link your essays and policy memos here:</p>
-          <ul>
-            <li><a href="#">Policy Memo: Digital Information Warfare</a></li>
-            <li><a href="#">Essay: Perception and Media</a></li>
-          </ul>
-        </div>
-      </div>
-
     </section>
 
     <section id="contact">
@@ -179,18 +119,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Accordion toggle with smooth scroll
-    function toggleSection(id) {
-      document.querySelectorAll('.expand-content').forEach(sec => {
-        if (sec.id !== id) sec.classList.remove('open');
-      });
-      const section = document.getElementById(id);
-      section.classList.toggle('open');
-      if (section.classList.contains('open')) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
   </script>
 </body>
 </html>
+
